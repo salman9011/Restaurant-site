@@ -77,7 +77,7 @@ const Body = () => {
             setFilteredres(filter);
           }}
         >
-          Click Here to Filter Restraurents
+          Click Here to Filter Restaurants
         </button>
       </div>
 

@@ -35465,7 +35465,7 @@ const Body = ()=>{
                             const filter = listOfRestaurents.filter((val)=>val.info.avgRating > 4.2);
                             setFilteredres(filter);
                         },
-                        children: "Click Here to Filter Restraurents"
+                        children: "Click Here to Filter Restaurants"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
                         lineNumber: 71,
@@ -35667,7 +35667,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "Menu_api", ()=>Menu_api);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const Menu_api = "https://proxy.cors.sh/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.95250&lng=75.71050&restaurantId=";
+const Menu_api = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.95250&lng=75.71050&restaurantId=";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"imnNo":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b57 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -36235,11 +36235,7 @@ const useMenuCard = (resId)=>{
         fetchMenu();
     }, []);
     const fetchMenu = async ()=>{
-        const data = await fetch((0, _constants.Menu_api) + resId, {
-            headers: {
-                "x-cors-api-key": "temp_1d50d0137e4f00f30e4e9f94a1c96753"
-            }
-        });
+        const data = await fetch((0, _constants.Menu_api) + resId);
         const json = await data.json();
         // console.log(json);
         setresInfo(json.data);

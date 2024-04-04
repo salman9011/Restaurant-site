@@ -8,12 +8,7 @@ const useMenuCard = (resId) => {
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(Menu_api + resId, {
-      headers: {
-        'x-cors-api-key': 'temp_1d50d0137e4f00f30e4e9f94a1c96753'
-        }
-    }
-      );
+    const data = await fetch(Menu_api + resId);
     
     const json = await data.json();
     // console.log(json);
