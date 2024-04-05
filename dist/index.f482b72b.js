@@ -35403,8 +35403,8 @@ const Body = ()=>{
         });
         const json = await data.json(data);
         // console.log(json);
-        setListOfRestaurents(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredres(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurents(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredres(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
     if (onlineStatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -36229,20 +36229,30 @@ var _constants = require("../utils/constants");
 var _s = $RefreshSig$();
 const useMenuCard = (resId)=>{
     _s();
-    // ths is my custom hook//
-    const [resinfo, setresInfo] = (0, _react.useState)(null);
+    const [resinfo, setResInfo] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
+        const fetchMenu = async ()=>{
+            try {
+                const response = await fetch(`https://proxy.cors.sh/${(0, _constants.Menu_api)}/${resId}`, {
+                    headers: {
+                        "x-cors-api-key": "temp_1d50d0137e4f00f30e4e9f94a1c96753"
+                    }
+                });
+                if (!response.ok) throw new Error("Failed to fetch menu");
+                const json = await response.json();
+                setResInfo(json.data);
+            } catch (error) {
+                console.error("Error fetching menu:", error);
+            // Handle error state if needed
+            }
+        };
         fetchMenu();
-    }, []);
-    const fetchMenu = async ()=>{
-        const data = await fetch((0, _constants.Menu_api) + resId);
-        const json = await data.json();
-        // console.log(json);
-        setresInfo(json.data);
-    };
+    }, [
+        resId
+    ]);
     return resinfo;
 };
-_s(useMenuCard, "xEXLX8I+Xzs2VTNabr25YUOHYxM=");
+_s(useMenuCard, "uiWiOvEgLfQwmSnbUNqSY+L4hzM=");
 exports.default = useMenuCard;
 
   $parcel$ReactRefreshHelpers$cb25.postlude(module);
