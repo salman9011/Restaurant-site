@@ -36147,7 +36147,7 @@ const RestaurantMenu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
     const resinfo = (0, _useMenuCardDefault.default)(resId); //calling my custom hook//
-    [showIndex, setshowIndex] = (0, _react.useState)(null);
+    const [showIndex, setshowIndex] = (0, _react.useState)(null);
     // console.log(resinfo);
     if (resinfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.jsx",
@@ -36199,7 +36199,7 @@ const RestaurantMenu = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(RestaurantMenu, "PAI+pAJRutFfvPbuJ1wT8AsnZuY=", false, function() {
+_s(RestaurantMenu, "oBlwrxJV016uo/wzFXoVdyrE5n8=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useMenuCardDefault.default)
