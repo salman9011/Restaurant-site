@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const {resId} = useParams();
   const resinfo = useMenuCard(resId); //calling my custom hook//
 
-  [showIndex,setshowIndex]=useState(null);
+ const [showIndex,setshowIndex]=useState(null);
   // console.log(resinfo);
   if (resinfo === null) return <Shimmer />;
 
