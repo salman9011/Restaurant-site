@@ -1,6 +1,6 @@
 # Food fire APP
 
-Namaste Food is a web application designed to help users discover and explore various restaurants. With intuitive search functionalities, detailed restaurant information, and a user-friendly interface, Namaste Food aims to enhance the dining experience for users.
+Food fire is a web application designed to help users discover and explore various restaurants. With intuitive search functionalities, detailed restaurant information, and a user-friendly interface, Namaste Food aims to enhance the dining experience for users.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ Namaste Food is a web application designed to help users discover and explore va
 
 ## Introduction
 
-Namaste Food offers users the ability to search for restaurants based on various criteria such as cuisine, location, or restaurant name. It provides detailed information about each restaurant including its name, star rating, cuisine type, and estimated delivery time. The project focuses on delivering a seamless and enjoyable experience for users seeking to explore dining options in their area.
+Food fire offers users the ability to search for restaurants based on various criteria such as cuisine, location, or restaurant name. It provides detailed information about each restaurant including its name, star rating, cuisine type, and estimated delivery time. The project focuses on delivering a seamless and enjoyable experience for users seeking to explore dining options in their area.
 
 ## Technologies Used
 
@@ -52,10 +52,10 @@ Before you begin, ensure you have the following installed on your system:
 
 ```bash
 $ git clone https://github.com/salman9011/Restaurant-site.git
-$ cd namaste-food
+$ cd fire-food
 $ npm install
 $ npm start
-namaste-food/
+fire-food/
 ├── public/
 │   ├── index.html
 │   └── ...
