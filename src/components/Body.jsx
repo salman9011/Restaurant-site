@@ -19,19 +19,19 @@ const Body = () => {
   async function getRestaurant() {
     const data = await fetch(
       "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.95250&lng=75.71050&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",{
-      headers: {
-        'x-cors-api-key': 'temp_1d50d0137e4f00f30e4e9f94a1c96753'
+        headers: {
+          'x-cors-api-key':'temp_1d50d0137e4f00f30e4e9f94a1c96753'
+          }
         }
-      }
-    );
+  );
     const json = await data.json(data);
     // console.log(json);
     setListOfRestaurents(
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
 
     setFilteredres(
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
   const onlineStatus = useShowStatus();
